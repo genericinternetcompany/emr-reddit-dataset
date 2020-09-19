@@ -64,6 +64,6 @@ if __name__ == "__main__":
 
     print(distinct_gilded_authors_by_subreddit)
 
-    distinct_gilded_authors_by_subreddit.write.parquet(sys.argv[1])
+    distinct_gilded_authors_by_subreddit.write.parquet("s3://gic-k8s-scratch/authors/authors.parquet")
 
-    average_score_by_subreddit.write.parquet(sys.argv[2])
+    average_score_by_subreddit.write.parquet("s3://gic-k8s-scratch/authors/authors.parquet")
